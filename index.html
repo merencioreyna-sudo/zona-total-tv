@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Zona Total TV - Transmisión en vivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- hls.js para reproducción de streams HLS -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header con logo y menú hamburguesa -->
+        <header class="header">
+            <div class="logo">
+                <h1>ZONA TOTAL</h1>
+                
+            </div>
+            <div class="header-buttons">
+                <a href="https://merencioreyna-sudo.github.io/zona-total/" class="home-btn" target="_self">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Banner (fuera del header) -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">TV <span class="hero-accent">EN VIVO</span></h1>
+                <p class="hero-subtitle">Transmisión en vivo 24/7 · Los mejores canales · Sin interrupciones</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number" id="totalChannelsCount">0</span>
+                        <span class="stat-label">Canales en vivo</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Siempre activos</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">HD</span>
+                        <span class="stat-label">Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías horizontales (escritorio) -->
+        <nav class="categories-nav" id="categoriesNav">
+            <button class="category-btn active" data-category="Todos">Todos</button>
+            <button class="category-btn" data-category="Deportes">Deportes</button>
+            <button class="category-btn" data-category="Noticias">Noticias</button>
+            <button class="category-btn" data-category="Películas">Películas</button>
+            <button class="category-btn" data-category="Música">Música</button>
+            <button class="category-btn" data-category="Reality">Reality</button>
+            <button class="category-btn" data-category="Series">Series</button>
+            <button class="category-btn" data-category="Variados">🔥 Variados</button>
+        </nav>
+
+        <!-- Carrusel de canales destacados -->
+        <section class="featured-section">
+            <div class="featured-header">
+                <h2><i class="fas fa-fire"></i> Destacados</h2>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" id="featuredPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next-btn" id="featuredNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="featured-carousel" id="featuredCarousel"></div>
+        </section>
+
+        <!-- Área del reproductor -->
+        <section class="player-section">
+            <div class="player-container" id="playerContainer">
+                <div class="player-placeholder">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                    </svg>
+                    <p>Selecciona un canal para comenzar</p>
+                </div>
+            </div>
+            <div class="current-channel-info" id="currentChannelInfo">
+                <span class="channel-badge">⚡ EN VIVO</span>
+                <span class="channel-name" id="currentChannelName">Ningún canal seleccionado</span>
+            </div>
+        </section>
+
+        <!-- Grid de canales -->
+        <section class="channels-section">
+            <h2 class="section-title" id="sectionTitle">Todos los canales</h2>
+            <div class="channels-grid" id="channelsGrid">
+                <!-- Los canales se renderizan dinámicamente con JS -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>ZONA TOTAL</h3>
+                    <p>TV en vivo · Streaming sin límites</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://merencioreyna-sudo.github.io/zona-total/">Inicio</a>
+                    <a href="terminos.html">Términos de uso</a>
+                    <a href="privacidad.html">Política de privacidad</a>
+                    <a href="ayuda.html">Ayuda</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Zona Total. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Menú lateral móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">ZONA TOTAL</div>
+                <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
+            </div>
+            <nav class="mobile-categories">
+                <button class="mobile-category-btn active" data-category="Todos">Todos</button>
+                <button class="mobile-category-btn" data-category="Deportes">Deportes</button>
+                <button class="mobile-category-btn" data-category="Noticias">Noticias</button>
+                <button class="mobile-category-btn" data-category="Películas">Películas</button>
+                <button class="mobile-category-btn" data-category="Música">Música</button>
+                <button class="mobile-category-btn" data-category="Reality">Reality</button>
+                <button class="mobile-category-btn" data-category="Series">Series</button>
+                <button class="mobile-category-btn" data-category="Variados">🔥 Variados</button>
+            </nav>
+            <div class="mobile-footer">
+                <a href="https://merencioreyna-sudo.github.io/zona-total/" class="mobile-home-btn">
+                    <i class="fas fa-home"></i> Ir al Inicio
+                </a>
+            </div>
+        </div>
+
+        <!-- Modal de error -->
+        <div class="modal-overlay" id="errorModal">
+            <div class="modal-content">
+                <div class="modal-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                </div>
+                <h3 id="modalTitle">Canal no disponible</h3>
+                <p id="modalMessage">El canal no está disponible o tiene problemas de conexión.</p>
+                <button class="modal-close-btn" id="closeModal">Entendido</button>
+            </div>
+        </div>
+
+        <!-- Overlay para cerrar menú móvil tocando fuera -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </div>
+
+    <script src="app.js"></script>
+<!-- BOTÓN AYUDA PRO -->
+<div class="help-btn" id="helpBtn">
+    <i class="fas fa-headset"></i>
+    <span class="help-badge">!</span>
+</div>
+
+<!-- MODAL AYUDA PRO -->
+<div class="help-modal" id="helpModal">
+    <div class="help-content">
+        <button class="close-help" id="closeHelp">&times;</button>
+
+        <h3>Centro de Ayuda</h3>
+
+        <p class="help-text">¿Problemas con un canal?</p>
+
+        <div class="help-options">
+            <div class="help-item">🌍 Puede estar bloqueado en tu país</div>
+            <div class="help-item">🔐 Puede requerir VPN</div>
+            <div class="help-item">⚠️ El servidor puede estar caído</div>
+        </div>
+
+        <a href="ayuda.html" class="help-link">Ver ayuda completa</a>
+    </div>
+</div>
+
+<!-- BOTÓN CHAT -->
+<div class="chat-btn" id="chatBtn">
+    <i class="fas fa-robot"></i>
+</div>
+
+<!-- CHAT BOX -->
+<div class="chat-box" id="chatBox">
+    <div class="chat-header">
+        <span>Asistente</span>
+        <button id="closeChat">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+        <div class="bot-msg">👋 Hola, ¿en qué puedo ayudarte?</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+        <button id="sendChat">➤</button>
+    </div>
+</div>
+
+</body>
+</html>
