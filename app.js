@@ -91,12 +91,10 @@ function closeErrorModal() {
 
 // ===== FUNCIÓN: REPRODUCIR CANAL =====
 function playChannel(streamUrl, channelName, isRestrictedForCuba = false) {
-    if (isRestrictedForCuba && userCountry === "CU") {
-// 🚧 BLOQUEAR DEPORTES Y PELICULAS (PRÓXIMAMENTE)
+   // 🚧 BLOQUEAR DEPORTES Y PELICULAS (PRÓXIMAMENTE)
 const canal = channelsDatabase.find(ch => ch.name === channelName);
 
 if (canal && (canal.category === "Deportes" || canal.category === "Peliculas")) {
-
     playerContainer.innerHTML = `
         <div class="coming-soon-overlay">
             <div class="coming-soon-box">
@@ -106,13 +104,14 @@ if (canal && (canal.category === "Deportes" || canal.category === "Peliculas")) 
             </div>
         </div>
     `;
-
-
     return;
 }
-        showErrorModal(true, channelName);
-        return;
-    }
+
+// 🔒 RESTRICCIÓN POR PAÍS (CUBA)
+if (isRestrictedForCuba && userCountry === "CU") {
+    showErrorModal(true, channelName);
+    return;
+}
 
     playerContainer.innerHTML = "";
     if (currentHls) {
@@ -188,34 +187,37 @@ function renderChannels(category) {
         filteredChannels = channelsDatabase.filter(ch => ch.category === category);
     }
 
-    if (filteredChannels.length === 0) {
-
-    // 🚧 Mostrar "Próximamente" en el reproductor
-    if (category === "Deportes" || category === "Peliculas") {
-
+    // 🧹 LIMPIAR "PRÓXIMAMENTE" SI HAY CANALES
+    if (filteredChannels.length > 0) {
         playerContainer.innerHTML = `
-            <div class="coming-soon-overlay">
-                <div class="coming-soon-box">
-                    <div class="lock-icon">🔒</div>
-                    <h2>Próximamente</h2>
-                    <p>Estamos trabajando en esta sección</p>
-                </div>
+            <div class="player-placeholder">
+                <p>Selecciona un canal para comenzar</p>
             </div>
         `;
-
-        
-        
-
-        // Limpiar grid (opcional)
-        channelsGrid.innerHTML = "";
-
-        return;
     }
 
-    channelsGrid.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">No hay canales en esta categoría</p>';
-    return;
-}
+    if (filteredChannels.length === 0) {
 
+        // 🚧 Mostrar "Próximamente"
+        if (category === "Deportes" || category === "Películas") {
+
+            playerContainer.innerHTML = `
+                <div class="coming-soon-overlay">
+                    <div class="coming-soon-box">
+                        <div class="lock-icon">🔒</div>
+                        <h2>Próximamente</h2>
+                        <p>Estamos trabajando en esta sección</p>
+                    </div>
+                </div>
+            `;
+
+            channelsGrid.innerHTML = "";
+            return;
+        }
+
+        channelsGrid.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">No hay canales en esta categoría</p>';
+        return;
+    }
        channelsGrid.innerHTML = filteredChannels.map((channel, index) => `
         <div class="channel-card" data-channel-index="${index}" data-tooltip="${channel.name} · ${channel.category} · 24/7">
             <div class="channel-thumbnail">
@@ -337,7 +339,7 @@ function initSearch() {
             channels = channelsDatabase.filter(ch => ch.category === category);
         }
         
-        const filtered = channels.filter(channel => 
+       const filtered = channels.filter(channel => 
             channel.name.toLowerCase().includes(searchTerm)
         );
         
@@ -530,7 +532,7 @@ function initChat() {
 }
 
 if (text.includes("peliculas")) {
-    respuestas.push("🎬 La sección Películas estará disponible próximamente 🚧");
+    respuestas.push("🎬 Actualmente no hay canales activos en la sección Películas.");
 }
 
     // ===== PROBLEMAS =====
