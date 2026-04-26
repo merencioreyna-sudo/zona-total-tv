@@ -6,15 +6,6 @@ const channelsDatabase = [
     // VARIADOS
 
 { 
-  id: 40, 
-  name: "RNE Para Todos", 
-  category: "Variados", 
-  thumbnail: "https://graph.facebook.com/radionacionalrne/picture?width=200&height=200", 
-  streamUrl: "https://ztnr.rtve.es/ztnr/6688753.m3u8", 
-  restrictedCountries: [] 
-},
-
-  { 
   id: 31, 
   name: "Litus TV Documentales", 
   category: "Variados", 
@@ -22,47 +13,8 @@ const channelsDatabase = [
   streamUrl: "https://stream.arcast.com.ar/litustv/ngrp:litustv_all/playlist.m3u8", 
   restrictedCountries: [] 
 },
-    { 
-  id: 32, 
-  name: "MDS Stream Música", 
-  category: "Variados", 
-  thumbnail: "https://th.bing.com/th/id/OIP.YKvgJ2NLL2lN89xu7bN6ZAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", 
-  streamUrl: "https://mdstrm.com/video/631f6f0fe4eba7082bc551ad.m3u8?PlaylistM3UCL", 
-  restrictedCountries: [] 
-},
-   { 
-  id: 33, 
-  name: "Channel 01 Mexico Novelas", 
-  category: "Variados", 
-  thumbnail: "https://tse1.mm.bing.net/th/id/OIP.iRsPYYS9ehOQWiz6iitJWAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
-  streamUrl: "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8", 
-  restrictedCountries: [] 
-},
-    { 
-  id: 34, 
-  name: "Channel 08 Mexico Noticias", 
-  category: "Variados", 
-  thumbnail: "https://th.bing.com/th/id/OIP.liUMtBXuG49WdUR0O2HUNwHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
-  streamUrl: "https://channel08-onlymex.akamaized.net/hls/live/2037034/event01/index.m3u8", 
-  restrictedCountries: [] 
-},
-   { 
-  id: 35, 
-  name: "Power Turk TV", 
-  category: "Variados", 
-  thumbnail: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/70609240417911.5606d96bd100e.jpg",
-  streamUrl: "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8", 
-  restrictedCountries: [] 
-},
-    { 
-  id: 36, 
-  name: "RBMN Live", 
-  category: "Variados", 
-  thumbnail: "https://th.bing.com/th/id/OIP.wIvNcIkzUTTD4YCcVTgEOwHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", 
-  streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8?null=0", 
-  restrictedCountries: [] 
-},
-    { 
+  
+{  
   id: 37, 
   name: "RBMN Live 2", 
   category: "Variados", 
@@ -70,81 +22,25 @@ const channelsDatabase = [
   streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", 
   restrictedCountries: [] 
 },
-    { 
-  id: 38, 
-  name: "OTtera 3053 Clásicos", 
-  category: "Variados", 
-  thumbnail: "https://tse2.mm.bing.net/th/id/OIP.W0vkyru5n4aL2cEVFFGSSgHaEi?rs=1&pid=ImgDetMain&o=7&rm=3",
-  streamUrl: "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3053", 
-  restrictedCountries: [] 
-},
-    { 
-  id: 39, 
-  name: "OTtera 3527", 
-  category: "Variados", 
-  thumbnail: "https://techround.co.uk/wp-content/uploads/2022/10/logo.png",
-  streamUrl: "https://stream.ads.ottera.tv/playlist.m3u8?network_id=3527", 
-  restrictedCountries: [] 
-},
-
-{ 
-  id: 44, 
-  name: "RTVE Stream", 
-  category: "Variados", 
-  thumbnail: "https://tse3.mm.bing.net/th/id/OIP.SB1H9m3K2sdMXHnZsxiUmwHaD4?rs=1&pid=ImgDetMain&o=7&rm=3",
-  streamUrl: "https://ztnr.rtve.es/ztnr/1688877.m3u8", 
-  restrictedCountries: [] 
-},
-
-    
+  
+  
        // NOTICIAS
-    { id: 7, name: "Maussan Televisión", category: "Noticias", thumbnail: "https://i.ytimg.com/vi/N2T8lnfMSLo/hqdefault.jpg", streamUrl: "https://www.youtube.com/embed/N2T8lnfMSLo", restrictedCountries: [] },
-    { id: 8, name: "C5N EN VIVO", category: "Noticias", thumbnail: "https://img.youtube.com/vi/SF06Qy1Ct6Y/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/SF06Qy1Ct6Y", restrictedCountries: [] },
     { id: 10, name: "Noticias Telemundo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/c660thEPeeY/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/c660thEPeeY", restrictedCountries: [] },
-    { id: 12, name: "CNN en Español", category: "Noticias", thumbnail: "https://i.ytimg.com/vi/MnaHrXkbkAM/hqdefault.jpg", streamUrl: "https://www.youtube.com/embed/MnaHrXkbkAM", restrictedCountries: [] },
     { id: 20, name: "N+ Univision 24/7", category: "Noticias", thumbnail: "https://img.youtube.com/vi/V4C7VNfRATA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/V4C7VNfRATA", restrictedCountries: [] },
-    { id: 30, name: "Canal Siete", category: "Noticias", thumbnail: "https://img.youtube.com/vi/Vh8xmLBJtR8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Vh8xmLBJtR8", restrictedCountries: [] },
-
-{ 
-  id: 42, 
-  name: "Aragón TV", 
-  category: "Noticias", 
-  thumbnail: "https://graph.facebook.com/AragonTV/picture?width=200&height=200", 
-  streamUrl: "https://cartv.streaming.aranova.es/hls/live/aragontv_canal1.m3u8/", 
-  restrictedCountries: [] 
-},
-
     
 // MÚSICA
    { id: 2, name: "LoFi 24/7", category: "Música", thumbnail: "https://img.youtube.com/vi/jfKfPfyJRdk/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk", restrictedCountries: [] },
-    { id: 16, name: "LA POPU Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/Bi7vMAqkYCg/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Bi7vMAqkYCg", restrictedCountries: [] },
-    { id: 17, name: "Radio Vale FM", category: "Música", thumbnail: "https://img.youtube.com/vi/x5fbS_4RrFU/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/x5fbS_4RrFU", restrictedCountries: [] },
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
     { id: 24, name: "Verano 2026", category: "Música", thumbnail: "https://img.youtube.com/vi/kxW-HJNjs8w/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/kxW-HJNjs8w", restrictedCountries: [] },
 
     
     // SERIES
     { id: 21, name: "Relatos de Terror", category: "Series", thumbnail: "https://img.youtube.com/vi/fsdnbsnLW3I/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fsdnbsnLW3I", restrictedCountries: [] },
-    { id: 25, name: "El Circo de las Montini", category: "Series", thumbnail: "https://img.youtube.com/vi/cknu7LGp7gM/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/cknu7LGp7gM", restrictedCountries: [] },
    
     // REALITY
 
-{ 
-  id: 43, 
-  name: "La 2 RTVE", 
-  category: "Reality", 
-  thumbnail: "https://graph.facebook.com/la2detve/picture?width=200&height=200", 
-  streamUrl: "https://ztnr.rtve.es/ztnr/5190066.m3u8/", 
-  restrictedCountries: [] 
-},
-
-    { id: 9, name: "La Casa de los Famosos Colombia", category: "Reality", thumbnail: "https://img.youtube.com/vi/bCJ5foMXVOw/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/bCJ5foMXVOw", restrictedCountries: [] },
-    { id: 11, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
-    { id: 26, name: "Qué hay pa' dañar", category: "Reality", thumbnail: "https://img.youtube.com/vi/0QkyevFkqfM/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/0QkyevFkqfM", restrictedCountries: [] },
-    { id: 28, name: "Calle 7", category: "Reality", thumbnail: "https://img.youtube.com/vi/9DxjRnl59WA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/9DxjRnl59WA", restrictedCountries: [] }
-];
-
-
+    { id: 11, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] }
+ ];   
 // ===== ESTADO GLOBAL =====
 let currentCategory = "Todos";
 let currentHls = null;
