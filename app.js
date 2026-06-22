@@ -4,32 +4,30 @@ const channelsDatabase = [
 
 
     // VARIADOS
-
-{ 
-  id: 31, 
-  name: "Litus TV Documentales", 
-  category: "Variados", 
-  thumbnail: "https://www.lt10.com.ar/multimedia/in1459538917708.jpeg", 
-  streamUrl: "https://stream.arcast.com.ar/litustv/ngrp:litustv_all/playlist.m3u8", 
-  restrictedCountries: [] 
-},
-  
-{  
-  id: 37, 
-  name: "RBMN Live 2", 
-  category: "Variados", 
-  thumbnail: "https://tse4.mm.bing.net/th/id/OIP.zPV3vyk91eABTnakPzJwDAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
-  streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", 
-  restrictedCountries: [] 
-},
-  
-  
-       // NOTICIAS
+    { 
+        id: 31, 
+        name: "Litus TV Documentales", 
+        category: "Variados", 
+        thumbnail: "https://www.lt10.com.ar/multimedia/in1459538917708.jpeg", 
+        streamUrl: "https://stream.arcast.com.ar/litustv/ngrp:litustv_all/playlist.m3u8", 
+        restrictedCountries: [] 
+    },
+    {  
+        id: 37, 
+        name: "RBMN Live 2", 
+        category: "Variados", 
+        thumbnail: "https://tse4.mm.bing.net/th/id/OIP.zPV3vyk91eABTnakPzJwDAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
+        streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", 
+        restrictedCountries: [] 
+    },
+      
+    // NOTICIAS
     { id: 10, name: "Noticias Telemundo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/c660thEPeeY/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/c660thEPeeY", restrictedCountries: [] },
     { id: 20, name: "N+ Univision 24/7", category: "Noticias", thumbnail: "https://img.youtube.com/vi/V4C7VNfRATA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/V4C7VNfRATA", restrictedCountries: [] },
     
-// MÚSICA
-   { id: 2, name: "LoFi 24/7", category: "Música", thumbnail: "https://img.youtube.com/vi/jfKfPfyJRdk/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk", restrictedCountries: [] },
+    
+    // MÚSICA
+    { id: 2, name: "LoFi 24/7", category: "Música", thumbnail: "https://img.youtube.com/vi/jfKfPfyJRdk/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk", restrictedCountries: [] },
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
     { id: 24, name: "Verano 2026", category: "Música", thumbnail: "https://img.youtube.com/vi/kxW-HJNjs8w/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/kxW-HJNjs8w", restrictedCountries: [] },
 
@@ -37,12 +35,12 @@ const channelsDatabase = [
     // SERIES
     { id: 21, name: "Relatos de Terror", category: "Series", thumbnail: "https://img.youtube.com/vi/fsdnbsnLW3I/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fsdnbsnLW3I", restrictedCountries: [] },
    
-   // REALITY
-[
+    
+    // REALITY
     { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
     { id: 38, name: "La Casa de Alofoke", category: "Reality", thumbnail: "https://img.youtube.com/vi/EDTPy_3_sjw/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/EDTPy_3_sjw", restrictedCountries: [] },
     { id: 39, name: "El Chavvo del 8", category: "Reality", thumbnail: "https://img.youtube.com/vi/fy_fYd3ZwPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fy_fYd3ZwPE", restrictedCountries: [] }
-];
+]; // <--- CIERRE CORRECTO DEL ARRAY PRINCIPAL
 
 // ===== ESTADO GLOBAL =====
 let currentCategory = "Todos";
