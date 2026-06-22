@@ -38,9 +38,11 @@ const channelsDatabase = [
     { id: 21, name: "Relatos de Terror", category: "Series", thumbnail: "https://img.youtube.com/vi/fsdnbsnLW3I/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fsdnbsnLW3I", restrictedCountries: [] },
    
     // REALITY
+[
+    { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
+    { id: 2, name: "Nuevo Reality", category: "Reality", thumbnail: "https://th.bing.com/th/id/OIP.nEkejW3fj--yURGRAl-6uQHaE8?w=273&h=182&c=7&r=0&o=7&pid=1.7&rm=3", streamUrl: "https://www.youtube.com/embed/EDTPy_3_sjw", restrictedCountries: [] }
+];
 
-    { id: 11, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] }
- ];   
 // ===== ESTADO GLOBAL =====
 let currentCategory = "Todos";
 let currentHls = null;
