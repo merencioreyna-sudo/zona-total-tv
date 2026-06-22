@@ -11,12 +11,10 @@ const channelsDatabase = [
     { id: 53, name: "Tlnovelas Pasión 24/7", category: "Variados", thumbnail: "https://img.youtube.com/vi/ZPjHO-cAZ3A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/ZPjHO-cAZ3A", restrictedCountries: [] },
       
     // NOTICIAS
-    { id: 10, name: "Noticias Telemundo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/c660thEPeeY/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/c660thEPeeY", restrictedCountries: [] },
     { id: 20, name: "N+ Univision 24/7", category: "Noticias", thumbnail: "https://img.youtube.com/vi/V4C7VNfRATA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/V4C7VNfRATA", restrictedCountries: [] },
     { id: 41, name: "América En Vivo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/zcWXboTnous/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/zcWXboTnous", restrictedCountries: [] },
     
     // MÚSICA
-    { id: 2, name: "LoFi 24/7", category: "Música", thumbnail: "https://img.youtube.com/vi/jfKfPfyJRdk/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk", restrictedCountries: [] },
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
     { id: 24, name: "Verano 2026", category: "Música", thumbnail: "https://img.youtube.com/vi/kxW-HJNjs8w/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/kxW-HJNjs8w", restrictedCountries: [] },
     { id: 46, name: "METAL 24/7 - Nuclear Blast Records", category: "Música", thumbnail: "https://img.youtube.com/vi/3LWMFjRZQ6k/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/3LWMFjRZQ6k", restrictedCountries: [] },
@@ -27,7 +25,6 @@ const channelsDatabase = [
     { id: 52, name: "Terror en Vivo 24/7", category: "Películas", thumbnail: "https://img.youtube.com/vi/Yzl-Xc1XhMM/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Yzl-Xc1XhMM", restrictedCountries: [] },
 
     // SERIES
-    { id: 21, name: "Relatos de Terror", category: "Series", thumbnail: "https://img.youtube.com/vi/fsdnbsnLW3I/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fsdnbsnLW3I", restrictedCountries: [] },
     { id: 51, name: "Mad Max - Warner Bros. Rewind", category: "Series", thumbnail: "https://img.youtube.com/vi/igcstjLsLsA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/igcstjLsLsA", restrictedCountries: [] },
     { id: 54, name: "Police Academy - Warner Bros. Rewind", category: "Series", thumbnail: "https://tse3.mm.bing.net/th/id/OIP.RGm2L9V94jq6bVCW_1-segHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://www.youtube.com/embed/koAHvs1Sf7M", restrictedCountries: [] },
    
