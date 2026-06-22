@@ -4,30 +4,11 @@ const channelsDatabase = [
     { id: 40, name: "Top Calcio 24 HD", category: "Deportes", thumbnail: "https://img.youtube.com/vi/smcQvzsh5Qo/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/smcQvzsh5Qo", restrictedCountries: [] },
 
     // VARIADOS
-    { 
-        id: 31, 
-        name: "Litus TV Documentales", 
-        category: "Variados", 
-        thumbnail: "https://www.lt10.com.ar/multimedia/in1459538917708.jpeg", 
-        streamUrl: "https://stream.arcast.com.ar/litustv/ngrp:litustv_all/playlist.m3u8", 
-        restrictedCountries: [] 
-    },
-    {  
-        id: 37, 
-        name: "RBMN Live 2", 
-        category: "Variados", 
-        thumbnail: "https://tse4.mm.bing.net/th/id/OIP.zPV3vyk91eABTnakPzJwDAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
-        streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", 
-        restrictedCountries: [] 
-    },
-    { 
-        id: 43, 
-        name: "Canal Siete", 
-        category: "Variados", 
-        thumbnail: "https://img.youtube.com/vi/Vh8xmLBJtR8/maxresdefault.jpg", 
-        streamUrl: "https://www.youtube.com/embed/Vh8xmLBJtR8", 
-        restrictedCountries: [] 
-    },
+    { id: 31, name: "Litus TV Documentales", category: "Variados", thumbnail: "https://www.lt10.com.ar/multimedia/in1459538917708.jpeg", streamUrl: "https://stream.arcast.com.ar/litustv/ngrp:litustv_all/playlist.m3u8", restrictedCountries: [] },
+    { id: 37, name: "RBMN Live 2", category: "Variados", thumbnail: "https://tse4.mm.bing.net/th/id/OIP.zPV3vyk91eABTnakPzJwDAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", restrictedCountries: [] },
+    { id: 43, name: "Canal Siete", category: "Variados", thumbnail: "https://img.youtube.com/vi/Vh8xmLBJtR8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Vh8xmLBJtR8", restrictedCountries: [] },
+    { id: 48, name: "Bingo - Español Canal Oficial", category: "Variados", thumbnail: "https://img.youtube.com/vi/LNzdII3Zv10/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LNzdII3Zv10", restrictedCountries: [] },
+    { id: 53, name: "Tlnovelas Pasión 24/7", category: "Variados", thumbnail: "https://img.youtube.com/vi/ZPjHO-cAZ3A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/ZPjHO-cAZ3A", restrictedCountries: [] },
       
     // NOTICIAS
     { id: 10, name: "Noticias Telemundo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/c660thEPeeY/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/c660thEPeeY", restrictedCountries: [] },
@@ -38,15 +19,28 @@ const channelsDatabase = [
     { id: 2, name: "LoFi 24/7", category: "Música", thumbnail: "https://img.youtube.com/vi/jfKfPfyJRdk/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/jfKfPfyJRdk", restrictedCountries: [] },
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
     { id: 24, name: "Verano 2026", category: "Música", thumbnail: "https://img.youtube.com/vi/kxW-HJNjs8w/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/kxW-HJNjs8w", restrictedCountries: [] },
+    { id: 46, name: "METAL 24/7 - Nuclear Blast Records", category: "Música", thumbnail: "https://img.youtube.com/vi/3LWMFjRZQ6k/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/3LWMFjRZQ6k", restrictedCountries: [] },
+    { id: 47, name: "Spinnin' Records 24/7 Live Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/xf9Ejt4OmWQ/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/xf9Ejt4OmWQ", restrictedCountries: [] },
+
+    // PELÍCULAS
+    { id: 50, name: "The Lord of the Rings - Warner Bros.", category: "Películas", thumbnail: "https://img.youtube.com/vi/G43NInZfoPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/G43NInZfoPE", restrictedCountries: [] },
+    { id: 52, name: "Terror en Vivo 24/7", category: "Películas", thumbnail: "https://img.youtube.com/vi/Yzl-Xc1XhMM/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Yzl-Xc1XhMM", restrictedCountries: [] },
 
     // SERIES
     { id: 21, name: "Relatos de Terror", category: "Series", thumbnail: "https://img.youtube.com/vi/fsdnbsnLW3I/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fsdnbsnLW3I", restrictedCountries: [] },
+    { id: 51, name: "Mad Max - Warner Bros. Rewind", category: "Series", thumbnail: "https://img.youtube.com/vi/igcstjLsLsA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/igcstjLsLsA", restrictedCountries: [] },
+    { id: 54, name: "Police Academy - Warner Bros. Rewind", category: "Series", thumbnail: "https://tse3.mm.bing.net/th/id/OIP.RGm2L9V94jq6bVCW_1-segHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://www.youtube.com/embed/koAHvs1Sf7M", restrictedCountries: [] },
    
     // REALITY
     { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
     { id: 38, name: "La Casa de Alofoke", category: "Reality", thumbnail: "https://img.youtube.com/vi/EDTPy_3_sjw/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/EDTPy_3_sjw", restrictedCountries: [] },
     { id: 39, name: "El Chavvo del 8", category: "Reality", thumbnail: "https://img.youtube.com/vi/fy_fYd3ZwPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fy_fYd3ZwPE", restrictedCountries: [] },
-    { id: 42, name: "La Familia P. Luche", category: "Reality", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] }
+    { id: 42, name: "La Familia P. Luche", category: "Reality", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] },
+    { id: 45, name: "Decisiones Maratón 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/LP5ZRTlzv7A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LP5ZRTlzv7A", restrictedCountries: [] },
+    { id: 49, name: "Volverías con tu ex / Non Stop", category: "Reality", thumbnail: "https://img.youtube.com/vi/izbrTTkeNY8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/izbrTTkeNY8", restrictedCountries: [] },
+
+    // DOCUMENTALES
+    { id: 44, name: "Live Cat TV - Squirrel & Bird Watching", category: "Documentales", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] }
 ];
 
 // ===== ESTADO GLOBAL =====
