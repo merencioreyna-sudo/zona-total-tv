@@ -89,12 +89,11 @@ function closeErrorModal() {
     errorModal.classList.remove("active");
 }
 
-// ===== FUNCIÓN: REPRODUCIR CANAL =====
 function playChannel(streamUrl, channelName, isRestrictedForCuba = false) {
-   // 🚧 BLOQUEAR DEPORTES Y PELICULAS (PRÓXIMAMENTE)
+   // 🚧 BLOQUEAR SOLO PELICULAS (PRÓXIMAMENTE)
 const canal = channelsDatabase.find(ch => ch.name === channelName);
 
-if (canal && (canal.category === "Deportes" || canal.category === "Peliculas")) {
+if (canal && canal.category === "Peliculas") {
     playerContainer.innerHTML = `
         <div class="coming-soon-overlay">
             <div class="coming-soon-box">
