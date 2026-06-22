@@ -20,6 +20,14 @@ const channelsDatabase = [
         streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", 
         restrictedCountries: [] 
     },
+    { 
+        id: 43, 
+        name: "Canal Siete", 
+        category: "Variados", 
+        thumbnail: "https://img.youtube.com/vi/Vh8xmLBJtR8/maxresdefault.jpg", 
+        streamUrl: "https://www.youtube.com/embed/Vh8xmLBJtR8", 
+        restrictedCountries: [] 
+    },
       
     // NOTICIAS
     { id: 10, name: "Noticias Telemundo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/c660thEPeeY/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/c660thEPeeY", restrictedCountries: [] },
