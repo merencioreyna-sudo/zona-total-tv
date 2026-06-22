@@ -1,7 +1,7 @@
 // ===== BASE DE DATOS DE CANALES =====
 const channelsDatabase = [
     // DEPORTES
-
+    { id: 40, name: "Top Calcio 24 HD", category: "Deportes", thumbnail: "https://img.youtube.com/vi/smcQvzsh5Qo/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/smcQvzsh5Qo", restrictedCountries: [] },
 
     // VARIADOS
     { 
