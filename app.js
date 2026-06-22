@@ -37,7 +37,8 @@ const channelsDatabase = [
     // REALITY
     { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
     { id: 38, name: "La Casa de Alofoke", category: "Reality", thumbnail: "https://img.youtube.com/vi/EDTPy_3_sjw/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/EDTPy_3_sjw", restrictedCountries: [] },
-    { id: 39, name: "El Chavvo del 8", category: "Reality", thumbnail: "https://img.youtube.com/vi/fy_fYd3ZwPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fy_fYd3ZwPE", restrictedCountries: [] }
+    { id: 39, name: "El Chavvo del 8", category: "Reality", thumbnail: "https://img.youtube.com/vi/fy_fYd3ZwPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fy_fYd3ZwPE", restrictedCountries: [] },
+    { id: 42, name: "La Familia P. Luche", category: "Reality", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] }
 ];
 
 // ===== ESTADO GLOBAL =====
