@@ -35,30 +35,18 @@ const channelsDatabase = [
     { id: 96, name: "Pluto TV Cine Accion", category: "Películas", thumbnail: "https://images.pluto.tv/channels/5dcb62e63d4d8f0009f36881/colorLogoPNG_1760378798093.png", streamUrl: "https://jmp2.uk/plu-5dcb62e63d4d8f0009f36881.m3u8", restrictedCountries: [] },
     { id: 99, name: "Pluto TV Anime", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62f3e2d000418d00070f7dbc/colorLogoPNG_1751272759694.png", streamUrl: "https://jmp2.uk/plu-62f3e2d000418d00070f7dbc.m3u8", restrictedCountries: [] },
     { id: 100, name: "FAN (Animación)", category: "Películas", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] },
-
-    // TERROR
-    { id: 66, name: "Pluto TV Horror", category: "Películas", thumbnail: "https://images.pluto.tv/channels/569546031a619b8f07ce6e25/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-569546031a619b8f07ce6e25.m3u8", restrictedCountries: [] },
+    
     { id: 67, name: "Pluto TV Terror", category: "Películas", thumbnail: "https://i.imgur.com/eWtoHDM.png", streamUrl: "https://jmp2.uk/plu-5c6dc88fcd232425a6e0f06e.m3u8", restrictedCountries: [] },
 
-    // CLÁSICOS
     { id: 68, name: "Pluto TV Cine Clasico", category: "Películas", thumbnail: "https://images.pluto.tv/channels/609059dc63be6e0007b4eca6/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-609059dc63be6e0007b4eca6.m3u8", restrictedCountries: [] },
     { id: 69, name: "Classic Movies Channel", category: "Películas", thumbnail: "https://i.imgur.com/pQJxov2.png", streamUrl: "https://jmp2.uk/plu-561c5b0dada51f8004c4d855.m3u8", restrictedCountries: [] },
 
-    // BAILE / MÚSICA
-    { id: 70, name: "Pluto TV Cine Romance", category: "Películas", thumbnail: "https://images.pluto.tv/channels/5f171f988ab9780007fa95ea/colorLogoPNG_1771344977802.png", streamUrl: "https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8", restrictedCountries: [] },
     { id: 71, name: "Shemaroo Filmi Gaane", category: "Películas", thumbnail: "https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png", streamUrl: "https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8", restrictedCountries: [] },
 
-    // AVENTURAS
-    { id: 72, name: "Pluto TV Aventura", category: "Películas", thumbnail: "https://images.pluto.tv/channels/66c79a4262e5510008ff68a5/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-66c79a4262e5510008ff68a5.m3u8", restrictedCountries: [] },
-    { id: 73, name: "Pluto TV Cine Accion", category: "Películas", thumbnail: "https://images.pluto.tv/channels/5dcb62e63d4d8f0009f36881/colorLogoPNG_1760378798093.png", streamUrl: "https://jmp2.uk/plu-5dcb62e63d4d8f0009f36881.m3u8", restrictedCountries: [] },
-
-    // ARTES MARCIALES
     { id: 74, name: "Wu Tang Collection", category: "Películas", thumbnail: "https://i.imgur.com/sz55sBl.png", streamUrl: "https://dbrb49pjoymg4.cloudfront.net/10001/99991745/hls/master.m3u8?ads.xumo_channelId=99991745", restrictedCountries: [] },
     { id: 75, name: "NonStop Kung Fu", category: "Películas", thumbnail: "https://images.pluto.tv/channels/6728d2be529ac9000830dc15/colorLogoPNG_1732110461260.png", streamUrl: "https://jmp2.uk/plu-6728d33f030a2c0008edf4be.m3u8", restrictedCountries: [] },
 
-    // ANIME
-    { id: 76, name: "Pluto TV Anime", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62f3e2d000418d00070f7dbc/colorLogoPNG_1751272759694.png", streamUrl: "https://jmp2.uk/plu-62f3e2d000418d00070f7dbc.m3u8", restrictedCountries: [] },
-    { id: 77, name: "FAN (Animación)", category: "Películas", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] },
+   
 
     // SERIES
     { id: 58, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
