@@ -10,12 +10,16 @@ const channelsDatabase = [
     { id: 48, name: "Bingo - Español Canal Oficial", category: "Variados", thumbnail: "https://img.youtube.com/vi/LNzdII3Zv10/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LNzdII3Zv10", restrictedCountries: [] },
     { id: 53, name: "Tlnovelas Pasión 24/7", category: "Variados", thumbnail: "https://img.youtube.com/vi/ZPjHO-cAZ3A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/ZPjHO-cAZ3A", restrictedCountries: [] },
     { id: 57, name: "13 Humor", category: "Variados", thumbnail: "https://i.imgur.com/KvMuTzN.png", streamUrl: "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8", restrictedCountries: [] },
+    { id: 80, name: "13 Humor", category: "Variados", thumbnail: "https://i.imgur.com/KvMuTzN.png", streamUrl: "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8", restrictedCountries: [] },
+    { id: 81, name: "A7 TV", category: "Variados", thumbnail: "https://i.imgur.com/d9i0GqK.png", streamUrl: "https://a7tvlive.ro/A7TV/A7TV/playlist.m3u8", restrictedCountries: [] },
       
     // NOTICIAS
     { id: 20, name: "N+ Univision 24/7", category: "Noticias", thumbnail: "https://img.youtube.com/vi/V4C7VNfRATA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/V4C7VNfRATA", restrictedCountries: [] },
     { id: 41, name: "América En Vivo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/zcWXboTnous/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/zcWXboTnous", restrictedCountries: [] },
     { id: 55, name: "DW Español", category: "Noticias", thumbnail: "https://i.imgur.com/8Q9Y5ZP.png", streamUrl: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", restrictedCountries: [] },
     { id: 56, name: "RT en Español", category: "Noticias", thumbnail: "https://i.imgur.com/3Rq3X9w.png", streamUrl: "https://rt-esp.rttv.com/live/rtesp/playlist.m3u8", restrictedCountries: [] },
+    { id: 78, name: "DW Español", category: "Noticias", thumbnail: "https://i.imgur.com/8Q9Y5ZP.png", streamUrl: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", restrictedCountries: [] },
+    { id: 79, name: "RT en Español", category: "Noticias", thumbnail: "https://i.imgur.com/3Rq3X9w.png", streamUrl: "https://rt-esp.rttv.com/live/rtesp/playlist.m3u8", restrictedCountries: [] },
     
     // MÚSICA
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
@@ -23,6 +27,7 @@ const channelsDatabase = [
     { id: 46, name: "METAL 24/7 - Nuclear Blast Records", category: "Música", thumbnail: "https://img.youtube.com/vi/3LWMFjRZQ6k/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/3LWMFjRZQ6k", restrictedCountries: [] },
     { id: 47, name: "Spinnin' Records 24/7 Live Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/xf9Ejt4OmWQ/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/xf9Ejt4OmWQ", restrictedCountries: [] },
     { id: 60, name: "13 Festival", category: "Música", thumbnail: "https://i.imgur.com/Ymk6j5o.png", streamUrl: "https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8", restrictedCountries: [] },
+    { id: 85, name: "13 Festival", category: "Música", thumbnail: "https://i.imgur.com/Ymk6j5o.png", streamUrl: "https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8", restrictedCountries: [] },
 
     // PELÍCULAS
     { id: 50, name: "The Lord of the Rings - Warner Bros.", category: "Películas", thumbnail: "https://img.youtube.com/vi/G43NInZfoPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/G43NInZfoPE", restrictedCountries: [] },
@@ -31,6 +36,21 @@ const channelsDatabase = [
         // ACCIÓN
     { id: 64, name: "Pluto TV Action (US)", category: "Acción", thumbnail: "https://i.imgur.com/tDapGal.png", streamUrl: "https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8", restrictedCountries: [] },
     { id: 65, name: "Rakuten TV Action Movies", category: "Acción", thumbnail: "https://i.imgur.com/Meew6eX.png", streamUrl: "https://a9c57ec7ec5e4b7daeacc6316a0bb404.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6069/master.m3u8", restrictedCountries: [] },
+    { id: 86, name: "00s Replay", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8", restrictedCountries: [] },
+    { id: 87, name: "Pluto TV Action (US)", category: "Películas", thumbnail: "https://i.imgur.com/tDapGal.png", streamUrl: "https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8", restrictedCountries: [] },
+    { id: 88, name: "Rakuten TV Action Movies", category: "Películas", thumbnail: "https://i.imgur.com/Meew6eX.png", streamUrl: "https://a9c57ec7ec5e4b7daeacc6316a0bb404.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6069/master.m3u8", restrictedCountries: [] },
+    { id: 89, name: "Pluto TV Horror", category: "Películas", thumbnail: "https://images.pluto.tv/channels/569546031a619b8f07ce6e25/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-569546031a619b8f07ce6e25.m3u8", restrictedCountries: [] },
+    { id: 90, name: "Pluto TV Terror", category: "Películas", thumbnail: "https://i.imgur.com/eWtoHDM.png", streamUrl: "https://jmp2.uk/plu-5c6dc88fcd232425a6e0f06e.m3u8", restrictedCountries: [] },
+    { id: 91, name: "Pluto TV Cine Clasico", category: "Películas", thumbnail: "https://images.pluto.tv/channels/609059dc63be6e0007b4eca6/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-609059dc63be6e0007b4eca6.m3u8", restrictedCountries: [] },
+    { id: 92, name: "Classic Movies Channel", category: "Películas", thumbnail: "https://i.imgur.com/pQJxov2.png", streamUrl: "https://jmp2.uk/plu-561c5b0dada51f8004c4d855.m3u8", restrictedCountries: [] },
+    { id: 93, name: "Pluto TV Cine Romance", category: "Películas", thumbnail: "https://images.pluto.tv/channels/5f171f988ab9780007fa95ea/colorLogoPNG_1771344977802.png", streamUrl: "https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8", restrictedCountries: [] },
+    { id: 94, name: "Shemaroo Filmi Gaane", category: "Películas", thumbnail: "https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png", streamUrl: "https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8", restrictedCountries: [] },
+    { id: 95, name: "Pluto TV Aventura", category: "Películas", thumbnail: "https://images.pluto.tv/channels/66c79a4262e5510008ff68a5/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-66c79a4262e5510008ff68a5.m3u8", restrictedCountries: [] },
+    { id: 96, name: "Pluto TV Cine Accion", category: "Películas", thumbnail: "https://images.pluto.tv/channels/5dcb62e63d4d8f0009f36881/colorLogoPNG_1760378798093.png", streamUrl: "https://jmp2.uk/plu-5dcb62e63d4d8f0009f36881.m3u8", restrictedCountries: [] },
+    { id: 97, name: "Wu Tang Collection", category: "Películas", thumbnail: "https://i.imgur.com/sz55sBl.png", streamUrl: "https://dbrb49pjoymg4.cloudfront.net/10001/99991745/hls/master.m3u8?ads.xumo_channelId=99991745", restrictedCountries: [] },
+    { id: 98, name: "NonStop Kung Fu", category: "Películas", thumbnail: "https://images.pluto.tv/channels/6728d2be529ac9000830dc15/colorLogoPNG_1732110461260.png", streamUrl: "https://jmp2.uk/plu-6728d33f030a2c0008edf4be.m3u8", restrictedCountries: [] },
+    { id: 99, name: "Pluto TV Anime", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62f3e2d000418d00070f7dbc/colorLogoPNG_1751272759694.png", streamUrl: "https://jmp2.uk/plu-62f3e2d000418d00070f7dbc.m3u8", restrictedCountries: [] },
+    { id: 100, name: "FAN (Animación)", category: "Películas", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] },
 
     // TERROR
     { id: 66, name: "Pluto TV Horror", category: "Terror", thumbnail: "https://images.pluto.tv/channels/569546031a619b8f07ce6e25/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-569546031a619b8f07ce6e25.m3u8", restrictedCountries: [] },
@@ -61,6 +81,8 @@ const channelsDatabase = [
     { id: 54, name: "Police Academy - Warner Bros. Rewind", category: "Series", thumbnail: "https://tse3.mm.bing.net/th/id/OIP.RGm2L9V94jq6bVCW_1-segHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://www.youtube.com/embed/koAHvs1Sf7M", restrictedCountries: [] },
     { id: 58, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
     { id: 61, name: "13T", category: "Series", thumbnail: "https://i.imgur.com/csBNi2L.png", streamUrl: "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8", restrictedCountries: [] },
+    { id: 82, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
+    { id: 83, name: "13T", category: "Series", thumbnail: "https://i.imgur.com/csBNi2L.png", streamUrl: "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8", restrictedCountries: [] },
    
     // REALITY
     { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
@@ -70,6 +92,7 @@ const channelsDatabase = [
     { id: 45, name: "Decisiones Maratón 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/LP5ZRTlzv7A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LP5ZRTlzv7A", restrictedCountries: [] },
     { id: 49, name: "Volverías con tu ex / Non Stop", category: "Reality", thumbnail: "https://img.youtube.com/vi/izbrTTkeNY8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/izbrTTkeNY8", restrictedCountries: [] },
     { id: 59, name: "13 Realities", category: "Reality", thumbnail: "https://i.imgur.com/m0SuwMU.png", streamUrl: "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8", restrictedCountries: [] },
+    { id: 84, name: "13 Realities", category: "Reality", thumbnail: "https://i.imgur.com/m0SuwMU.png", streamUrl: "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8", restrictedCountries: [] },
 
     // DOCUMENTALES
     { id: 44, name: "Live Cat TV - Squirrel & Bird Watching", category: "Documentales", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] }
