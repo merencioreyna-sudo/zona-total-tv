@@ -16,7 +16,6 @@ const channelsDatabase = [
     { id: 55, name: "DW Español", category: "Noticias", thumbnail: "https://i.imgur.com/8Q9Y5ZP.png", streamUrl: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", restrictedCountries: [] },
     { id: 56, name: "RT en Español", category: "Noticias", thumbnail: "https://i.imgur.com/3Rq3X9w.png", streamUrl: "https://rt-esp.rttv.com/live/rtesp/playlist.m3u8", restrictedCountries: [] },
     { id: 78, name: "DW Español", category: "Noticias", thumbnail: "https://i.imgur.com/8Q9Y5ZP.png", streamUrl: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", restrictedCountries: [] },
-    { id: 79, name: "RT en Español", category: "Noticias", thumbnail: "https://i.imgur.com/3Rq3X9w.png", streamUrl: "https://rt-esp.rttv.com/live/rtesp/playlist.m3u8", restrictedCountries: [] },
     
     // MÚSICA
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
@@ -24,7 +23,6 @@ const channelsDatabase = [
     { id: 46, name: "METAL 24/7 - Nuclear Blast Records", category: "Música", thumbnail: "https://img.youtube.com/vi/3LWMFjRZQ6k/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/3LWMFjRZQ6k", restrictedCountries: [] },
     { id: 47, name: "Spinnin' Records 24/7 Live Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/xf9Ejt4OmWQ/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/xf9Ejt4OmWQ", restrictedCountries: [] },
     { id: 60, name: "13 Festival", category: "Música", thumbnail: "https://i.imgur.com/Ymk6j5o.png", streamUrl: "https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8", restrictedCountries: [] },
-    { id: 85, name: "13 Festival", category: "Música", thumbnail: "https://i.imgur.com/Ymk6j5o.png", streamUrl: "https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8", restrictedCountries: [] },
 
     // PELÍCULAS
     { id: 50, name: "The Lord of the Rings - Warner Bros.", category: "Películas", thumbnail: "https://img.youtube.com/vi/G43NInZfoPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/G43NInZfoPE", restrictedCountries: [] },
