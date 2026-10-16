@@ -46,7 +46,6 @@ const channelsDatabase = [
     { id: 74, name: "Wu Tang Collection", category: "Películas", thumbnail: "https://i.imgur.com/sz55sBl.png", streamUrl: "https://dbrb49pjoymg4.cloudfront.net/10001/99991745/hls/master.m3u8?ads.xumo_channelId=99991745", restrictedCountries: [] },
     { id: 75, name: "NonStop Kung Fu", category: "Películas", thumbnail: "https://images.pluto.tv/channels/6728d2be529ac9000830dc15/colorLogoPNG_1732110461260.png", streamUrl: "https://jmp2.uk/plu-6728d33f030a2c0008edf4be.m3u8", restrictedCountries: [] },
 
-   
 
     // SERIES
     { id: 58, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
