@@ -499,243 +499,149 @@ function initChat() {
     }
 
     // ===== IA CON MEMORIA =====
-   function getResponse(text) {
-    const original = text;
-    text = text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .trim();
+       function getResponse(text) {
+        text = text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
 
-    chatHistory.push(text);
+        chatHistory.push(text);
 
-    let respuestas = [];
+        let respuestas = [];
 
-    // ===== NORMALIZAR =====
-    const palabras = text.split(" ");
+        if (/(hola|buenas|hey|saludos)/.test(text)) {
+            respuestas.push("👋 Hola, dime qué estás buscando y te ayudo.");
+        }
 
-    // ===== SALUDO =====
-    if (/(hola|buenas|hey|saludos)/.test(text)) {
-        respuestas.push("👋 Hola, dime qué estás buscando y te ayudo.");
+        if (text.includes("cuantos canales") || text.includes("cuantos hay") || text.includes("cuantos son")) {
+            respuestas.push(`📡 Actualmente hay ${channelsDatabase.length} canales disponibles en total.`);
+        }
+
+        if (text.includes("noticias")) {
+            respuestas.push("📰 En Noticias tienes N+ Univision, América, DW Español y RT en Español.");
+        }
+
+        if (text.includes("deportes")) {
+            respuestas.push("⚽ En Deportes tienes Top Calcio 24 HD. Pronto agregaremos más.");
+        }
+
+        if (text.includes("musica")) {
+            respuestas.push("🎵 En Música tienes Deep House, Verano 2026, METAL, Spinnin' Records y 13 Festival.");
+        }
+
+        if (text.includes("series")) {
+            respuestas.push("📺 En Series tienes 3Cat Plats bruts y 13T.");
+        }
+
+        if (text.includes("reality")) {
+            respuestas.push("🔥 En Reality tienes Caso Cerrado, El Chavvo del 8, La Familia P. Luche, Decisiones y 13 Realities.");
+        }
+
+        if (text.includes("variados")) {
+            respuestas.push("📡 En Variados tienes Litus TV, RBMN Live 2, Canal Siete, 13 Humor y A7 TV.");
+        }
+
+        if (text.includes("documentales")) {
+            respuestas.push("🐱 En Documentales tienes Live Cat TV (Squirrel & Bird Watching).");
+        }
+
+        if (text.includes("pelicula") || text.includes("pelis") || text.includes("cine")) {
+            respuestas.push("🎬 En la sección Películas tienes canales de Acción, Terror, Clásicos, Aventuras, Artes Marciales, Anime y más. Todos están dentro de la misma categoría.");
+        }
+
+        if (text.includes("accion")) {
+            respuestas.push("💥 En Películas encontrarás 'Rakuten TV Action Movies', 'Pluto TV Cine Accion' y 'Pluto TV Action'.");
+        }
+
+        if (text.includes("terror") || text.includes("horror")) {
+            respuestas.push("👻 En Películas tienes 'Pluto TV Horror' y 'Pluto TV Terror'.");
+        }
+
+        if (text.includes("clasico") || text.includes("clasica")) {
+            respuestas.push("🎞️ En Películas tienes 'Pluto TV Cine Clasico' y 'Classic Movies Channel'.");
+        }
+
+        if (text.includes("aventura")) {
+            respuestas.push("🗺️ En Películas tienes 'Pluto TV Aventura' y 'Pluto TV Cine Accion'.");
+        }
+
+        if (text.includes("marcial") || text.includes("kung fu") || text.includes("karate")) {
+            respuestas.push("🥋 En Películas tienes 'Wu Tang Collection' y 'NonStop Kung Fu'.");
+        }
+
+        if (text.includes("anime")) {
+            respuestas.push("🎌 En Películas tienes 'Pluto TV Anime' y 'FAN (Animación)'.");
+        }
+
+        if (text.includes("baile")) {
+            respuestas.push("💃 En Películas tienes 'Pluto TV Cine Romance' y 'Shemaroo Filmi Gaane'.");
+        }
+
+        if (text.includes("donde") && (text.includes("pelicula") || text.includes("cine"))) {
+            respuestas.push("📂 Ve a la categoría 'Películas' en el menú superior y ahí encontrarás todos los subgéneros.");
+        }
+
+        if (/(no funciona|no carga|error|no abre|no sirve)/.test(text)) {
+            respuestas.push("⚠️ Ese canal puede estar caído o bloqueado. Prueba otro o usa VPN.");
+        }
+
+        if (/(vpn|bloqueado|pais|region)/.test(text)) {
+            respuestas.push("🌍 Algunos canales están restringidos por país. Si no te cargan, prueba usando una VPN.");
+        }
+
+        if (/(contacto|soporte|numero|hablar|ayuda|problema)/.test(text)) {
+            respuestas.push("🆘 Puedes contactar a soporte por WhatsApp al 55877689 o por email a anelistrabajo@gmail.com.");
+        }
+
+        if (/(recomienda|que ver|algo bueno)/.test(text)) {
+            respuestas.push("🔥 Te recomiendo revisar los canales destacados o la categoría Variados.");
+        }
+
+        if (respuestas.length === 0) {
+            return generarRespuestaAvanzada(text);
+        }
+
+        return respuestas.join(" ");
     }
 
-    // ===== INTENCIÓN: VER / BUSCAR =====
-    if (/(ver|buscar|quiero|poner|abrir)/.test(text)) {
-        respuestas.push("📺 Puedes seleccionar cualquier canal desde la lista o usar las categorías.");
-    }
+    function intentarAbrirCanal(text) {
+        const query = text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
 
-    // ===== INTENCIÓN: NO ENCUENTRA =====
-    if (/(no encuentro|no veo|no aparece)/.test(text)) {
-        respuestas.push("🔎 Prueba cambiar de categoría o revisar la sección de destacados.");
-    }
+        const quiereAbrir = /(abre|abrir|pon|poner|quiero ver|ver canal|reproduce)/.test(query);
 
-    // ===== CANALES =====
-    if (text.includes("canal")) {
-        respuestas.push(`📡 Actualmente hay ${channelsDatabase.length} canales disponibles.`);
-    }
+        if (!quiereAbrir) return null;
 
-        // ===== CATEGORÍAS DINÁMICAS =====
-    if (text.includes("noticias")) {
-        respuestas.push("📰 En Noticias tienes N+ Univision, América, DW Español y RT en Español.");
-    }
+        const cleaned = query
+            .replace("abre", "")
+            .replace("abrir", "")
+            .replace("pon", "")
+            .replace("poner", "")
+            .replace("quiero ver", "")
+            .replace("ver canal", "")
+            .replace("reproduce", "")
+            .replace("tv", "")
+            .trim();
 
-    if (text.includes("deportes")) {
-        respuestas.push("⚽ En Deportes tienes Top Calcio 24 HD. Pronto agregaremos más.");
-    }
-
-    if (text.includes("musica")) {
-        respuestas.push("🎵 En Música tienes Deep House, Verano 2026, METAL, Spinnin' Records y 13 Festival.");
-    }
-
-    if (text.includes("series")) {
-        respuestas.push("📺 En Series tienes Mad Max, Police Academy, 3Cat Plats bruts y 13T.");
-    }
-
-    if (text.includes("reality")) {
-        respuestas.push("🔥 En Reality tienes Caso Cerrado, La Casa de Alofoke, El Chavvo del 8, La Familia P. Luche, Decisiones, Volverías con tu ex y 13 Realities.");
-    }
-
-    if (text.includes("variados")) {
-        respuestas.push("📡 En Variados tienes Litus TV, RBMN Live 2, Canal Siete, Bingo, Tlnovelas, 13 Humor y A7 TV.");
-    }
-
-    if (text.includes("documentales")) {
-        respuestas.push("🐱 En Documentales tienes Live Cat TV (Squirrel & Bird Watching).");
-    }
-
-    // ===== PELÍCULAS Y GÉNEROS =====
-    if (text.includes("pelicula") || text.includes("pelis") || text.includes("cine")) {
-        respuestas.push("🎬 En la sección Películas tienes canales de Acción, Terror, Clásicos, Aventuras, Artes Marciales, Anime y más. Todos están dentro de la misma categoría.");
-    }
-
-    if (text.includes("accion")) {
-        respuestas.push("💥 En Películas encontrarás 'Pluto TV Action' y 'Rakuten TV Action Movies'.");
-    }
-
-    if (text.includes("terror") || text.includes("horror")) {
-        respuestas.push("👻 En Películas tienes 'Pluto TV Horror' y 'Pluto TV Terror'.");
-    }
-
-    if (text.includes("clasico") || text.includes("clasica")) {
-        respuestas.push("🎞️ En Películas tienes 'Pluto TV Cine Clasico' y 'Classic Movies Channel'.");
-    }
-
-    if (text.includes("aventura")) {
-        respuestas.push("🗺️ En Películas tienes 'Pluto TV Aventura' y 'Pluto TV Cine Accion'.");
-    }
-
-    if (text.includes("marcial") || text.includes("kung fu") || text.includes("karate")) {
-        respuestas.push("🥋 En Películas tienes 'Wu Tang Collection' y 'NonStop Kung Fu'.");
-    }
-
-    if (text.includes("anime")) {
-        respuestas.push("🎌 En Películas tienes 'Pluto TV Anime' y 'FAN (Animación)'.");
-    }
-
-    if (text.includes("baile")) {
-        respuestas.push("💃 En Películas tienes 'Pluto TV Cine Romance' y 'Shemaroo Filmi Gaane'.");
-    }
-
-    if (text.includes("donde") && (text.includes("pelicula") || text.includes("cine"))) {
-        respuestas.push("📂 Ve a la categoría 'Películas' en el menú superior y ahí encontrarás todos los subgéneros.");
-    }
-
-    // ===== INFORMACIÓN GENERAL =====
-    if (text.includes("cuantos canales") || text.includes("cuantos hay")) {
-        respuestas.push(`📡 Actualmente hay ${channelsDatabase.length} canales disponibles en total.`);
-    }
-
-    if (text.includes("vpn") || text.includes("bloqueado") || text.includes("pais") || text.includes("region")) {
-        respuestas.push("🌍 Algunos canales están restringidos por país. Si no te cargan, prueba usando una VPN.");
-    }
-
-    if (text.includes("ayuda") || text.includes("problema") || text.includes("soporte")) {
-        respuestas.push("🆘 Si tienes problemas, puedes contactar a soporte por WhatsApp al 55877689 o por email a anelistrabajo@gmail.com.");
-    }
-
-    if (text.includes("accion")) {
-        respuestas.push("💥 En Películas encontrarás 'Pluto TV Action' y 'Rakuten TV Action Movies'.");
-    }
-
-    if (text.includes("terror") || text.includes("horror")) {
-        respuestas.push("👻 En Películas tienes 'Pluto TV Horror' y 'Pluto TV Terror'.");
-    }
-
-    if (text.includes("clasico") || text.includes("clasica")) {
-        respuestas.push("🎞️ En Películas tienes 'Pluto TV Cine Clasico' y 'Classic Movies Channel'.");
-    }
-
-    if (text.includes("aventura")) {
-        respuestas.push("🗺️ En Películas tienes 'Pluto TV Aventura' y 'Pluto TV Cine Accion'.");
-    }
-
-    if (text.includes("marcial") || text.includes("kung fu") || text.includes("karate")) {
-        respuestas.push("🥋 En Películas tienes 'Wu Tang Collection' y 'NonStop Kung Fu'.");
-    }
-
-    if (text.includes("anime")) {
-        respuestas.push("🎌 En Películas tienes 'Pluto TV Anime' y 'FAN (Animación)'.");
-    }
-
-    if (text.includes("donde") && (text.includes("pelicula") || text.includes("cine"))) {
-        respuestas.push("📂 Ve a la categoría 'Películas' en el menú superior y ahí encontrarás todos los subgéneros.");
-    }
-
-    // ===== PROBLEMAS =====
-    if (/(no funciona|no carga|error|no abre|no sirve)/.test(text)) {
-        respuestas.push("⚠️ Ese canal puede estar caído o bloqueado. Prueba otro o usa VPN.");
-    }
-
-    // ===== VPN =====
-    if (/(vpn|bloqueado|pais|region)/.test(text)) {
-        respuestas.push("🌍 Algunos canales están restringidos por país. Usa VPN.");
-    }
-
-    // ===== CONTACTO INTELIGENTE =====
-    if (/(contacto|dueña|soporte|numero|hablar)/.test(text)) {
-        return "📞 Puedes contactar soporte aquí 👉 https://wa.me/5355877689";
-    }
-
-    // ===== RECOMENDACIÓN =====
-    if (/(recomienda|que ver|algo bueno)/.test(text)) {
-        respuestas.push("🔥 Te recomiendo revisar los canales destacados o la categoría Variados.");
-    }
-
-    // ===== SI NO DETECTA NADA =====
-    if (respuestas.length === 0) {
-        return generarRespuestaAvanzada(text);
-    }
-
-    // ===== RESPUESTA FINAL =====
-    return respuestas.join(" ");
-}
-
-function intentarAbrirCanal(text) {
-    const query = text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-
-    const cleaned = query
-        .replace("abre", "")
-        .replace("pon", "")
-        .replace("ver", "")
-        .replace("quiero", "")
-        .replace("tv", "")
-        .trim();
-
-    // 🔹 Buscar canal por nombre
-    let canalEncontrado = channelsDatabase.find(channel => {
-    const nombre = channel.name
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-
-    return nombre.includes(cleaned);
-});
-
-    if (canalEncontrado) {
-        playChannel(canalEncontrado.streamUrl, canalEncontrado.name);
-        return `📺 Abriendo ${canalEncontrado.name}...`;
-    }
-
-        // 🔹 Detectar categorías
-    const categorias = ["deportes", "noticias", "musica", "peliculas", "series", "reality", "variados", "documentales", "anime", "accion", "terror", "clasicos", "aventuras", "artes marciales", "baile"];
-
-    let categoriaDetectada = categorias.find(cat =>
-    query.includes(cat)
-);
-
-            if (categoriaDetectada) {
-        let canales = channelsDatabase.filter(channel => {
-            if (!channel.category) return false;
-            const cat = channel.category
+        let canalEncontrado = channelsDatabase.find(channel => {
+            const nombre = channel.name
                 .toLowerCase()
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "");
-            return cat.includes(categoriaDetectada);
+
+            return nombre.includes(cleaned);
         });
 
-        if (canales.length > 0) {
-            let listaHTML = `<div class="chat-list">📺 Canales de ${categoriaDetectada}:<br>`;
-
-            canales.forEach(canal => {
-                listaHTML += `
-                    <div class="chat-card" onclick="playChannel('${canal.streamUrl}', '${canal.name}')">
-                        <div class="chat-card-title">${canal.name}</div>
-                        <div class="chat-card-play">▶ Ver canal</div>
-                    </div>
-                `;
-            });
-
-            listaHTML += `</div>`;
-            return listaHTML;
-        } else {
-            return `🤔 No encontré canales en la categoría "${categoriaDetectada}". Prueba con otra.`;
+        if (canalEncontrado) {
+            playChannel(canalEncontrado.streamUrl, canalEncontrado.name);
+            return `📺 Abriendo ${canalEncontrado.name}...`;
         }
+
+        return null;
     }
-    return null;
-}
 
 function generarRespuestaAvanzada(text) {
 
@@ -758,27 +664,22 @@ function generarRespuestaAvanzada(text) {
     return respuestas[Math.floor(Math.random() * respuestas.length)];
 }
 
-    function sendMessage() {
-    const text = input.value.trim();
-    if (!text) return;
+        function sendMessage() {
+        const text = input.value.trim();
+        if (!text) return;
 
-    messages.innerHTML += `<div class="user-msg">${text}</div>`;
-    input.value = "";
+        messages.innerHTML += `<div class="user-msg">${text}</div>`;
+        input.value = "";
 
-    setTimeout(() => {
-       let reply = intentarAbrirCanal(text);
-
-// 🔥 Si hay intento de canal (aunque sea categoría), NO usar bot normal
-if (reply) {
-    // ya resolvió (canal abierto)
-} else {
-    reply = getResponse(text);
-}
-
-        messages.innerHTML += `<div class="bot-msg">${reply}</div>`;
-        messages.scrollTop = messages.scrollHeight;
-    }, 600);
-}
+        setTimeout(() => {
+            let reply = intentarAbrirCanal(text);
+            if (!reply) {
+                reply = getResponse(text);
+            }
+            messages.innerHTML += `<div class="bot-msg">${reply}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+        }, 600);
+    }
 
     if (sendBtn) sendBtn.onclick = sendMessage;
 
