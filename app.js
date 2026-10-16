@@ -575,9 +575,38 @@ function initChat() {
     respuestas.push("📺 Puedes ver contenido en la categoría Series.");
 }
 
-if (text.includes("peliculas")) {
-    respuestas.push("🎬 Actualmente no hay canales activos en la sección Películas.");
-}
+    // ===== PELÍCULAS =====
+    if (text.includes("pelicula") || text.includes("pelis") || text.includes("cine")) {
+        respuestas.push("🎬 En la sección Películas tienes canales de Acción, Terror, Clásicos, Aventuras, Artes Marciales y Anime. Todos están dentro de la misma categoría.");
+    }
+
+    if (text.includes("accion")) {
+        respuestas.push("💥 En Películas encontrarás 'Pluto TV Action' y 'Rakuten TV Action Movies'.");
+    }
+
+    if (text.includes("terror") || text.includes("horror")) {
+        respuestas.push("👻 En Películas tienes 'Pluto TV Horror' y 'Pluto TV Terror'.");
+    }
+
+    if (text.includes("clasico") || text.includes("clasica")) {
+        respuestas.push("🎞️ En Películas tienes 'Pluto TV Cine Clasico' y 'Classic Movies Channel'.");
+    }
+
+    if (text.includes("aventura")) {
+        respuestas.push("🗺️ En Películas tienes 'Pluto TV Aventura' y 'Pluto TV Cine Accion'.");
+    }
+
+    if (text.includes("marcial") || text.includes("kung fu") || text.includes("karate")) {
+        respuestas.push("🥋 En Películas tienes 'Wu Tang Collection' y 'NonStop Kung Fu'.");
+    }
+
+    if (text.includes("anime")) {
+        respuestas.push("🎌 En Películas tienes 'Pluto TV Anime' y 'FAN (Animación)'.");
+    }
+
+    if (text.includes("donde") && (text.includes("pelicula") || text.includes("cine"))) {
+        respuestas.push("📂 Ve a la categoría 'Películas' en el menú superior y ahí encontrarás todos los subgéneros.");
+    }
 
     // ===== PROBLEMAS =====
     if (/(no funciona|no carga|error|no abre|no sirve)/.test(text)) {
