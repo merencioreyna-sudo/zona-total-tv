@@ -598,7 +598,7 @@ function initChat() {
 
         return respuestas.join(" ");
     }
-}
+
 
     function intentarAbrirCanal(text) {
         const query = text
