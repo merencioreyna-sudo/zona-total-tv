@@ -706,11 +706,15 @@ function intentarAbrirCanal(text) {
     query.includes(cat)
 );
 
-        if (categoriaDetectada) {
-        let canales = channelsDatabase.filter(channel =>
-            channel.category &&
-            channel.category.toLowerCase().includes(categoriaDetectada)
-        );
+            if (categoriaDetectada) {
+        let canales = channelsDatabase.filter(channel => {
+            if (!channel.category) return false;
+            const cat = channel.category
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+            return cat.includes(categoriaDetectada);
+        });
 
         if (canales.length > 0) {
             let listaHTML = `<div class="chat-list">📺 Canales de ${categoriaDetectada}:<br>`;
