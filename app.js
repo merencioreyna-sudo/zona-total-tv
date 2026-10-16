@@ -54,7 +54,7 @@ const channelsDatabase = [
 
     // ANIME
     { id: 76, name: "Pluto TV Anime", category: "Anime", thumbnail: "https://images.pluto.tv/channels/62f3e2d000418d00070f7dbc/colorLogoPNG_1751272759694.png", streamUrl: "https://jmp2.uk/plu-62f3e2d000418d00070f7dbc.m3u8", restrictedCountries: [] },
-    { id: 77, name: "FAN (Animación)", category: "Anime", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] }
+    { id: 77, name: "FAN (Animación)", category: "Anime", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] },
 
     // SERIES
     { id: 51, name: "Mad Max - Warner Bros. Rewind", category: "Series", thumbnail: "https://img.youtube.com/vi/igcstjLsLsA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/igcstjLsLsA", restrictedCountries: [] },
