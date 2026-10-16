@@ -31,12 +31,10 @@ const channelsDatabase = [
 
     // PELÍCULAS
     { id: 50, name: "The Lord of the Rings - Warner Bros.", category: "Películas", thumbnail: "https://img.youtube.com/vi/G43NInZfoPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/G43NInZfoPE", restrictedCountries: [] },
-    { id: 52, name: "Terror en Vivo 24/7", category: "Películas", thumbnail: "https://img.youtube.com/vi/Yzl-Xc1XhMM/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Yzl-Xc1XhMM", restrictedCountries: [] },
     { id: 63, name: "00s Replay", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8", restrictedCountries: [] },
         // ACCIÓN
     { id: 64, name: "Pluto TV Action (US)", category: "Acción", thumbnail: "https://i.imgur.com/tDapGal.png", streamUrl: "https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8", restrictedCountries: [] },
     { id: 65, name: "Rakuten TV Action Movies", category: "Acción", thumbnail: "https://i.imgur.com/Meew6eX.png", streamUrl: "https://a9c57ec7ec5e4b7daeacc6316a0bb404.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6069/master.m3u8", restrictedCountries: [] },
-    { id: 86, name: "00s Replay", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8", restrictedCountries: [] },
     { id: 87, name: "Pluto TV Action (US)", category: "Películas", thumbnail: "https://i.imgur.com/tDapGal.png", streamUrl: "https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8", restrictedCountries: [] },
     { id: 88, name: "Rakuten TV Action Movies", category: "Películas", thumbnail: "https://i.imgur.com/Meew6eX.png", streamUrl: "https://a9c57ec7ec5e4b7daeacc6316a0bb404.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6069/master.m3u8", restrictedCountries: [] },
     { id: 89, name: "Pluto TV Horror", category: "Películas", thumbnail: "https://images.pluto.tv/channels/569546031a619b8f07ce6e25/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-569546031a619b8f07ce6e25.m3u8", restrictedCountries: [] },
@@ -86,13 +84,10 @@ const channelsDatabase = [
    
     // REALITY
     { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
-    { id: 38, name: "La Casa de Alofoke", category: "Reality", thumbnail: "https://img.youtube.com/vi/EDTPy_3_sjw/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/EDTPy_3_sjw", restrictedCountries: [] },
     { id: 39, name: "El Chavvo del 8", category: "Reality", thumbnail: "https://img.youtube.com/vi/fy_fYd3ZwPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/fy_fYd3ZwPE", restrictedCountries: [] },
     { id: 42, name: "La Familia P. Luche", category: "Reality", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] },
     { id: 45, name: "Decisiones Maratón 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/LP5ZRTlzv7A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LP5ZRTlzv7A", restrictedCountries: [] },
-    { id: 49, name: "Volverías con tu ex / Non Stop", category: "Reality", thumbnail: "https://img.youtube.com/vi/izbrTTkeNY8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/izbrTTkeNY8", restrictedCountries: [] },
     { id: 59, name: "13 Realities", category: "Reality", thumbnail: "https://i.imgur.com/m0SuwMU.png", streamUrl: "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8", restrictedCountries: [] },
-    { id: 84, name: "13 Realities", category: "Reality", thumbnail: "https://i.imgur.com/m0SuwMU.png", streamUrl: "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8", restrictedCountries: [] },
 
     // DOCUMENTALES
     { id: 44, name: "Live Cat TV - Squirrel & Bird Watching", category: "Documentales", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] }
