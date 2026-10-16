@@ -15,7 +15,7 @@ const channelsDatabase = [
     { id: 41, name: "América En Vivo", category: "Noticias", thumbnail: "https://img.youtube.com/vi/zcWXboTnous/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/zcWXboTnous", restrictedCountries: [] },
     { id: 55, name: "DW Español", category: "Noticias", thumbnail: "https://i.imgur.com/8Q9Y5ZP.png", streamUrl: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", restrictedCountries: [] },
     { id: 56, name: "RT en Español", category: "Noticias", thumbnail: "https://i.imgur.com/3Rq3X9w.png", streamUrl: "https://rt-esp.rttv.com/live/rtesp/playlist.m3u8", restrictedCountries: [] },
-    { id: 78, name: "DW Español", category: "Noticias", thumbnail: "https://i.imgur.com/8Q9Y5ZP.png", streamUrl: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", restrictedCountries: [] },
+    
     
     // MÚSICA
     { id: 22, name: "Deep House Radio", category: "Música", thumbnail: "https://img.youtube.com/vi/IkmLXvBfVv0/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/IkmLXvBfVv0", restrictedCountries: [] },
@@ -592,12 +592,13 @@ function initChat() {
             respuestas.push("🔥 Te recomiendo revisar los canales destacados o la categoría Variados.");
         }
 
-        if (respuestas.length === 0) {
+                if (respuestas.length === 0) {
             return generarRespuestaAvanzada(text);
         }
 
         return respuestas.join(" ");
     }
+}
 
     function intentarAbrirCanal(text) {
         const query = text
