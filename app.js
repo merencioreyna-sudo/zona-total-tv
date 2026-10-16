@@ -558,26 +558,83 @@ function initChat() {
         respuestas.push(`📡 Actualmente hay ${channelsDatabase.length} canales disponibles.`);
     }
 
-    // ===== CATEGORÍAS DINÁMICAS =====
+        // ===== CATEGORÍAS DINÁMICAS =====
     if (text.includes("noticias")) {
-        respuestas.push("📰 En Noticias tienes CNN, Telemundo, C5N y más.");
+        respuestas.push("📰 En Noticias tienes N+ Univision, América, DW Español y RT en Español.");
     }
 
     if (text.includes("deportes")) {
-    respuestas.push("⚽ La sección Deportes estará disponible próximamente 🚧");
-}
-
-    if (text.includes("musica")) {
-        respuestas.push("🎵 En Música tienes radios en vivo 24/7.");
+        respuestas.push("⚽ En Deportes tienes Top Calcio 24 HD. Pronto agregaremos más.");
     }
 
-   if (text.includes("series")) {
-    respuestas.push("📺 Puedes ver contenido en la categoría Series.");
-}
+    if (text.includes("musica")) {
+        respuestas.push("🎵 En Música tienes Deep House, Verano 2026, METAL, Spinnin' Records y 13 Festival.");
+    }
 
-    // ===== PELÍCULAS =====
+    if (text.includes("series")) {
+        respuestas.push("📺 En Series tienes Mad Max, Police Academy, 3Cat Plats bruts y 13T.");
+    }
+
+    if (text.includes("reality")) {
+        respuestas.push("🔥 En Reality tienes Caso Cerrado, La Casa de Alofoke, El Chavvo del 8, La Familia P. Luche, Decisiones, Volverías con tu ex y 13 Realities.");
+    }
+
+    if (text.includes("variados")) {
+        respuestas.push("📡 En Variados tienes Litus TV, RBMN Live 2, Canal Siete, Bingo, Tlnovelas, 13 Humor y A7 TV.");
+    }
+
+    if (text.includes("documentales")) {
+        respuestas.push("🐱 En Documentales tienes Live Cat TV (Squirrel & Bird Watching).");
+    }
+
+    // ===== PELÍCULAS Y GÉNEROS =====
     if (text.includes("pelicula") || text.includes("pelis") || text.includes("cine")) {
-        respuestas.push("🎬 En la sección Películas tienes canales de Acción, Terror, Clásicos, Aventuras, Artes Marciales y Anime. Todos están dentro de la misma categoría.");
+        respuestas.push("🎬 En la sección Películas tienes canales de Acción, Terror, Clásicos, Aventuras, Artes Marciales, Anime y más. Todos están dentro de la misma categoría.");
+    }
+
+    if (text.includes("accion")) {
+        respuestas.push("💥 En Películas encontrarás 'Pluto TV Action' y 'Rakuten TV Action Movies'.");
+    }
+
+    if (text.includes("terror") || text.includes("horror")) {
+        respuestas.push("👻 En Películas tienes 'Pluto TV Horror' y 'Pluto TV Terror'.");
+    }
+
+    if (text.includes("clasico") || text.includes("clasica")) {
+        respuestas.push("🎞️ En Películas tienes 'Pluto TV Cine Clasico' y 'Classic Movies Channel'.");
+    }
+
+    if (text.includes("aventura")) {
+        respuestas.push("🗺️ En Películas tienes 'Pluto TV Aventura' y 'Pluto TV Cine Accion'.");
+    }
+
+    if (text.includes("marcial") || text.includes("kung fu") || text.includes("karate")) {
+        respuestas.push("🥋 En Películas tienes 'Wu Tang Collection' y 'NonStop Kung Fu'.");
+    }
+
+    if (text.includes("anime")) {
+        respuestas.push("🎌 En Películas tienes 'Pluto TV Anime' y 'FAN (Animación)'.");
+    }
+
+    if (text.includes("baile")) {
+        respuestas.push("💃 En Películas tienes 'Pluto TV Cine Romance' y 'Shemaroo Filmi Gaane'.");
+    }
+
+    if (text.includes("donde") && (text.includes("pelicula") || text.includes("cine"))) {
+        respuestas.push("📂 Ve a la categoría 'Películas' en el menú superior y ahí encontrarás todos los subgéneros.");
+    }
+
+    // ===== INFORMACIÓN GENERAL =====
+    if (text.includes("cuantos canales") || text.includes("cuantos hay")) {
+        respuestas.push(`📡 Actualmente hay ${channelsDatabase.length} canales disponibles en total.`);
+    }
+
+    if (text.includes("vpn") || text.includes("bloqueado") || text.includes("pais") || text.includes("region")) {
+        respuestas.push("🌍 Algunos canales están restringidos por país. Si no te cargan, prueba usando una VPN.");
+    }
+
+    if (text.includes("ayuda") || text.includes("problema") || text.includes("soporte")) {
+        respuestas.push("🆘 Si tienes problemas, puedes contactar a soporte por WhatsApp al 55877689 o por email a anelistrabajo@gmail.com.");
     }
 
     if (text.includes("accion")) {
@@ -666,37 +723,37 @@ function intentarAbrirCanal(text) {
         return `📺 Abriendo ${canalEncontrado.name}...`;
     }
 
-    // 🔹 Detectar categorías
-    const categorias = ["deportes", "noticias", "musica", "peliculas", "infantil"];
+        // 🔹 Detectar categorías
+    const categorias = ["deportes", "noticias", "musica", "peliculas", "series", "reality", "variados", "documentales", "anime", "accion", "terror", "clasicos", "aventuras", "artes marciales", "baile"];
 
     let categoriaDetectada = categorias.find(cat =>
     query.includes(cat)
 );
 
-    if (categoriaDetectada) {
+        if (categoriaDetectada) {
         let canales = channelsDatabase.filter(channel =>
-    channel.category &&
-    channel.category.toLowerCase().includes(categoriaDetectada)
-);
+            channel.category &&
+            channel.category.toLowerCase().includes(categoriaDetectada)
+        );
 
-if (canales.length > 0) {
-    let listaHTML = `<div class="chat-list">📺 Canales de ${categoriaDetectada}:<br>`;
+        if (canales.length > 0) {
+            let listaHTML = `<div class="chat-list">📺 Canales de ${categoriaDetectada}:<br>`;
 
-    canales.slice(0, 5).forEach(canal => {
-        listaHTML += `
-            <div class="chat-card" onclick="playChannel('${canal.streamUrl}', '${canal.name}')">
-    <div class="chat-card-title">${canal.name}</div>
-    <div class="chat-card-play">▶ Ver canal</div>
-</div>
-        `;
-    });
+            canales.forEach(canal => {
+                listaHTML += `
+                    <div class="chat-card" onclick="playChannel('${canal.streamUrl}', '${canal.name}')">
+                        <div class="chat-card-title">${canal.name}</div>
+                        <div class="chat-card-play">▶ Ver canal</div>
+                    </div>
+                `;
+            });
 
-    listaHTML += `</div>`;
-
-    return listaHTML;
-}
+            listaHTML += `</div>`;
+            return listaHTML;
+        } else {
+            return `🤔 No encontré canales en la categoría "${categoriaDetectada}". Prueba con otra.`;
+        }
     }
-
     return null;
 }
 
