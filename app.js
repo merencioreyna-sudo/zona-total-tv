@@ -7,9 +7,6 @@ const channelsDatabase = [
     { id: 31, name: "Litus TV Documentales", category: "Variados", thumbnail: "https://www.lt10.com.ar/multimedia/in1459538917708.jpeg", streamUrl: "https://stream.arcast.com.ar/litustv/ngrp:litustv_all/playlist.m3u8", restrictedCountries: [] },
     { id: 37, name: "RBMN Live 2", category: "Variados", thumbnail: "https://tse4.mm.bing.net/th/id/OIP.zPV3vyk91eABTnakPzJwDAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8", restrictedCountries: [] },
     { id: 43, name: "Canal Siete", category: "Variados", thumbnail: "https://img.youtube.com/vi/Vh8xmLBJtR8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Vh8xmLBJtR8", restrictedCountries: [] },
-    { id: 48, name: "Bingo - Español Canal Oficial", category: "Variados", thumbnail: "https://img.youtube.com/vi/LNzdII3Zv10/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LNzdII3Zv10", restrictedCountries: [] },
-    { id: 53, name: "Tlnovelas Pasión 24/7", category: "Variados", thumbnail: "https://img.youtube.com/vi/ZPjHO-cAZ3A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/ZPjHO-cAZ3A", restrictedCountries: [] },
-    { id: 57, name: "13 Humor", category: "Variados", thumbnail: "https://i.imgur.com/KvMuTzN.png", streamUrl: "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8", restrictedCountries: [] },
     { id: 80, name: "13 Humor", category: "Variados", thumbnail: "https://i.imgur.com/KvMuTzN.png", streamUrl: "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8", restrictedCountries: [] },
     { id: 81, name: "A7 TV", category: "Variados", thumbnail: "https://i.imgur.com/d9i0GqK.png", streamUrl: "https://a7tvlive.ro/A7TV/A7TV/playlist.m3u8", restrictedCountries: [] },
       
@@ -75,11 +72,7 @@ const channelsDatabase = [
     { id: 77, name: "FAN (Animación)", category: "Anime", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] },
 
     // SERIES
-    { id: 51, name: "Mad Max - Warner Bros. Rewind", category: "Series", thumbnail: "https://img.youtube.com/vi/igcstjLsLsA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/igcstjLsLsA", restrictedCountries: [] },
-    { id: 54, name: "Police Academy - Warner Bros. Rewind", category: "Series", thumbnail: "https://tse3.mm.bing.net/th/id/OIP.RGm2L9V94jq6bVCW_1-segHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://www.youtube.com/embed/koAHvs1Sf7M", restrictedCountries: [] },
     { id: 58, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
-    { id: 61, name: "13T", category: "Series", thumbnail: "https://i.imgur.com/csBNi2L.png", streamUrl: "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8", restrictedCountries: [] },
-    { id: 82, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
     { id: 83, name: "13T", category: "Series", thumbnail: "https://i.imgur.com/csBNi2L.png", streamUrl: "https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8", restrictedCountries: [] },
    
     // REALITY
