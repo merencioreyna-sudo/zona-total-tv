@@ -9,6 +9,7 @@ const channelsDatabase = [
     { id: 43, name: "Canal Siete", category: "Variados", thumbnail: "https://img.youtube.com/vi/Vh8xmLBJtR8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Vh8xmLBJtR8", restrictedCountries: [] },
     { id: 48, name: "Bingo - Español Canal Oficial", category: "Variados", thumbnail: "https://img.youtube.com/vi/LNzdII3Zv10/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LNzdII3Zv10", restrictedCountries: [] },
     { id: 53, name: "Tlnovelas Pasión 24/7", category: "Variados", thumbnail: "https://img.youtube.com/vi/ZPjHO-cAZ3A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/ZPjHO-cAZ3A", restrictedCountries: [] },
+    { id: 57, name: "13 Humor", category: "Variados", thumbnail: "https://i.imgur.com/KvMuTzN.png", streamUrl: "https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8", restrictedCountries: [] },
       
     // NOTICIAS
     { id: 20, name: "N+ Univision 24/7", category: "Noticias", thumbnail: "https://img.youtube.com/vi/V4C7VNfRATA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/V4C7VNfRATA", restrictedCountries: [] },
@@ -29,6 +30,7 @@ const channelsDatabase = [
     // SERIES
     { id: 51, name: "Mad Max - Warner Bros. Rewind", category: "Series", thumbnail: "https://img.youtube.com/vi/igcstjLsLsA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/igcstjLsLsA", restrictedCountries: [] },
     { id: 54, name: "Police Academy - Warner Bros. Rewind", category: "Series", thumbnail: "https://tse3.mm.bing.net/th/id/OIP.RGm2L9V94jq6bVCW_1-segHaFj?rs=1&pid=ImgDetMain&o=7&rm=3", streamUrl: "https://www.youtube.com/embed/koAHvs1Sf7M", restrictedCountries: [] },
+    { id: 58, name: "3Cat Plats bruts", category: "Series", thumbnail: "https://i.imgur.com/49ZENis.png", streamUrl: "https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8", restrictedCountries: [] },
    
     // REALITY
     { id: 1, name: "Caso Cerrado 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/CG7UYN5OrQA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/CG7UYN5OrQA", restrictedCountries: [] },
@@ -37,6 +39,7 @@ const channelsDatabase = [
     { id: 42, name: "La Familia P. Luche", category: "Reality", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] },
     { id: 45, name: "Decisiones Maratón 24/7", category: "Reality", thumbnail: "https://img.youtube.com/vi/LP5ZRTlzv7A/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/LP5ZRTlzv7A", restrictedCountries: [] },
     { id: 49, name: "Volverías con tu ex / Non Stop", category: "Reality", thumbnail: "https://img.youtube.com/vi/izbrTTkeNY8/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/izbrTTkeNY8", restrictedCountries: [] },
+    { id: 59, name: "13 Realities", category: "Reality", thumbnail: "https://i.imgur.com/m0SuwMU.png", streamUrl: "https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8", restrictedCountries: [] },
 
     // DOCUMENTALES
     { id: 44, name: "Live Cat TV - Squirrel & Bird Watching", category: "Documentales", thumbnail: "https://img.youtube.com/vi/t8HuqJeu6LE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/t8HuqJeu6LE", restrictedCountries: [] }
