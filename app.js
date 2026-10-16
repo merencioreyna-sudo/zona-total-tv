@@ -27,6 +27,34 @@ const channelsDatabase = [
     // PELÍCULAS
     { id: 50, name: "The Lord of the Rings - Warner Bros.", category: "Películas", thumbnail: "https://img.youtube.com/vi/G43NInZfoPE/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/G43NInZfoPE", restrictedCountries: [] },
     { id: 52, name: "Terror en Vivo 24/7", category: "Películas", thumbnail: "https://img.youtube.com/vi/Yzl-Xc1XhMM/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/Yzl-Xc1XhMM", restrictedCountries: [] },
+    { id: 63, name: "00s Replay", category: "Películas", thumbnail: "https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8", restrictedCountries: [] },
+        // ACCIÓN
+    { id: 64, name: "Pluto TV Action (US)", category: "Acción", thumbnail: "https://i.imgur.com/tDapGal.png", streamUrl: "https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8", restrictedCountries: [] },
+    { id: 65, name: "Rakuten TV Action Movies", category: "Acción", thumbnail: "https://i.imgur.com/Meew6eX.png", streamUrl: "https://a9c57ec7ec5e4b7daeacc6316a0bb404.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6069/master.m3u8", restrictedCountries: [] },
+
+    // TERROR
+    { id: 66, name: "Pluto TV Horror", category: "Terror", thumbnail: "https://images.pluto.tv/channels/569546031a619b8f07ce6e25/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-569546031a619b8f07ce6e25.m3u8", restrictedCountries: [] },
+    { id: 67, name: "Pluto TV Terror", category: "Terror", thumbnail: "https://i.imgur.com/eWtoHDM.png", streamUrl: "https://jmp2.uk/plu-5c6dc88fcd232425a6e0f06e.m3u8", restrictedCountries: [] },
+
+    // CLÁSICOS
+    { id: 68, name: "Pluto TV Cine Clasico", category: "Clásicos", thumbnail: "https://images.pluto.tv/channels/609059dc63be6e0007b4eca6/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-609059dc63be6e0007b4eca6.m3u8", restrictedCountries: [] },
+    { id: 69, name: "Classic Movies Channel", category: "Clásicos", thumbnail: "https://i.imgur.com/pQJxov2.png", streamUrl: "https://jmp2.uk/plu-561c5b0dada51f8004c4d855.m3u8", restrictedCountries: [] },
+
+    // BAILE / MÚSICA
+    { id: 70, name: "Pluto TV Cine Romance", category: "Baile", thumbnail: "https://images.pluto.tv/channels/5f171f988ab9780007fa95ea/colorLogoPNG_1771344977802.png", streamUrl: "https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8", restrictedCountries: [] },
+    { id: 71, name: "Shemaroo Filmi Gaane", category: "Baile", thumbnail: "https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png", streamUrl: "https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8", restrictedCountries: [] },
+
+    // AVENTURAS
+    { id: 72, name: "Pluto TV Aventura", category: "Aventuras", thumbnail: "https://images.pluto.tv/channels/66c79a4262e5510008ff68a5/colorLogoPNG.png", streamUrl: "https://jmp2.uk/plu-66c79a4262e5510008ff68a5.m3u8", restrictedCountries: [] },
+    { id: 73, name: "Pluto TV Cine Accion", category: "Aventuras", thumbnail: "https://images.pluto.tv/channels/5dcb62e63d4d8f0009f36881/colorLogoPNG_1760378798093.png", streamUrl: "https://jmp2.uk/plu-5dcb62e63d4d8f0009f36881.m3u8", restrictedCountries: [] },
+
+    // ARTES MARCIALES
+    { id: 74, name: "Wu Tang Collection", category: "Artes Marciales", thumbnail: "https://i.imgur.com/sz55sBl.png", streamUrl: "https://dbrb49pjoymg4.cloudfront.net/10001/99991745/hls/master.m3u8?ads.xumo_channelId=99991745", restrictedCountries: [] },
+    { id: 75, name: "NonStop Kung Fu", category: "Artes Marciales", thumbnail: "https://images.pluto.tv/channels/6728d2be529ac9000830dc15/colorLogoPNG_1732110461260.png", streamUrl: "https://jmp2.uk/plu-6728d33f030a2c0008edf4be.m3u8", restrictedCountries: [] },
+
+    // ANIME
+    { id: 76, name: "Pluto TV Anime", category: "Anime", thumbnail: "https://images.pluto.tv/channels/62f3e2d000418d00070f7dbc/colorLogoPNG_1751272759694.png", streamUrl: "https://jmp2.uk/plu-62f3e2d000418d00070f7dbc.m3u8", restrictedCountries: [] },
+    { id: 77, name: "FAN (Animación)", category: "Anime", thumbnail: "https://i.imgur.com/mDeTbaF.png", streamUrl: "http://31.148.48.15/Fan/index.m3u8", restrictedCountries: [] }
 
     // SERIES
     { id: 51, name: "Mad Max - Warner Bros. Rewind", category: "Series", thumbnail: "https://img.youtube.com/vi/igcstjLsLsA/maxresdefault.jpg", streamUrl: "https://www.youtube.com/embed/igcstjLsLsA", restrictedCountries: [] },
