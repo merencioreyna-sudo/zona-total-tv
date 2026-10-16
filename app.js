@@ -127,12 +127,6 @@ if (canal && canal.category === "Peliculas") {
     return;
 }
 
-// 🔒 RESTRICCIÓN POR PAÍS (CUBA)
-if (isRestrictedForCuba && userCountry === "CU") {
-    showErrorModal(true, channelName);
-    return;
-}
-
     playerContainer.innerHTML = "";
     if (currentHls) {
         currentHls.destroy();
